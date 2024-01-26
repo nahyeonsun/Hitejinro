@@ -21,7 +21,6 @@ div#subtitle .titleani>button::before{
   opacity: 0.7;
   transition: 0.5s;
   content: "";
-  background-image: url(../img/right.svg);
   width: 60px;
   height: 60px;
   display: block;
@@ -30,6 +29,15 @@ div#subtitle .titleani>button::before{
 }
 div#subtitle .titleani>button.slick-prev::before{
    background-image: url(../img/left.svg);
+}
+div#subtitle .titleani>button.slick-prev:hover::before{
+   background-image: url(../img/left-black.svg);
+}
+div#subtitle .titleani>button.slick-next::before{
+   background-image: url(../img/right.svg);
+}
+div#subtitle .titleani>button.slick-next:hover::before{
+   background-image: url(../img/right-black.svg);
 }
 div#subtitle .slick-active button::before{
   color: #fff;

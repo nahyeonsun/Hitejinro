@@ -82,7 +82,10 @@ body{
   font-size: 45px;
 }
 .h3{
-  font-size: 35px;
+  font-size: 25px;
+  color: #222;
+  font-weight: 300;
+  margin-bottom: 40px;
 }
 .h4{
   font-size: 25px;

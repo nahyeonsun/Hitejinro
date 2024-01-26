@@ -1,0 +1,40 @@
+aside { 
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  right: 0;
+  background-color: #ccc;
+  top: 0;
+}
+aside .wrap { 
+  width: 50%;
+  margin: 0;
+  height: 100%;
+}
+aside .wrap h2 {
+ 
+}
+aside .wrap ul.list {
+ 
+}
+aside .wrap ul.list > li {
+ 
+}
+aside .wrap ul.list > li h3 {
+ 
+}
+aside .wrap ul.list > li h3 a {
+ 
+}
+aside .wrap ul.list > li ul.listsub {
+  display: none;
+}
+aside .wrap ul.list > li ul.listsub li {
+ 
+}
+aside .wrap ul.list > li ul.listsub li a {
+ 
+}
+aside .wrap ul.list > li ul.listsub li a img {
+ 
+}

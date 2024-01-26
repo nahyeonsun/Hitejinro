@@ -1,12 +1,10 @@
 section#product{
   background-color: #f4f4f4;
 }
-#product .wrap{
+#product .wrap{  
   
-  padding-top: 10px;
 }
 #product .wrap h2{
-  margin: 30px 0 30px;
   color: #222;
   font-size: 27px;
   font-weight: 300;
@@ -55,6 +53,7 @@ section#product{
 }
 #product ul.list li figure img{
   width: 100%;
+  height: 100%;
 }
 #product ul.list li h3{
   position: absolute;
@@ -75,6 +74,14 @@ section#product{
   font-size: 12px;
   position: relative;
 }
+#product ul.list li a::after{
+  content: "";
+  background-image: url(../img/more.svg);
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: -7px;  
+}
 #product ul.list li .wrapText{
  
 }
@@ -88,7 +95,6 @@ section#product{
   
 } 
 .snsani li a{
-
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
