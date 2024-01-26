@@ -5,6 +5,7 @@ aside {
   right: 0;
   background-color: #ccc;
   top: 0;
+  display: none;
 }
 aside .wrap { 
   width: 50%;
