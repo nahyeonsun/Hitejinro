@@ -10,7 +10,7 @@ div#subtitle button{
   z-index: 1;
 }
 div#subtitle button::before{
-  font-size: 8px;
+  font-size: 10px;
   opacity: 1;
   color: #fff;
   transition: 1s;
@@ -44,16 +44,16 @@ div#subtitle .slick-active button::before{
   opacity: 1;
 }
 div#subtitle .slick-prev{
-  left: 80px;
+  left: 230px;
 }
 div#subtitle .slick-next{
-  right: 80px;
+  right: 230px;
 }
 div#subtitle .wrap img {
   
 }
 div#subtitle .wrap .slick-dots{
-  bottom: 40px;
+  bottom: 18px;
 }
 div#subtitle .wrap .slick-dots li button{  
 }

@@ -6,7 +6,6 @@ section#product{
 }
 #product .wrap h2{
   color: #222;
-  font-size: 27px;
   font-weight: 300;
 }
 #product ul.list {
@@ -50,6 +49,7 @@ section#product{
 }
 #product ul.list li figure{
   
+  height: 100%;
 }
 #product ul.list li figure img{
   width: 100%;
