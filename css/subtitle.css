@@ -44,10 +44,10 @@ div#subtitle .slick-active button::before{
   opacity: 1;
 }
 div#subtitle .slick-prev{
-  left: 230px;
+  left: 210px;
 }
 div#subtitle .slick-next{
-  right: 230px;
+  right: 210px;
 }
 div#subtitle .wrap img {
   
@@ -56,6 +56,7 @@ div#subtitle .wrap .slick-dots{
   bottom: 18px;
 }
 div#subtitle .wrap .slick-dots li button{  
+  
 }
 div#subtitle .wrap .slick-dots li.slick-active button::after{ 
   content: "";

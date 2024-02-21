@@ -7,6 +7,7 @@ aside {
   background-color: #2f3339;
   min-height: 600px;
   transition: 1s;
+  z-index: 1;
 }
 aside .wrap { 
   width: 100px;
@@ -187,4 +188,7 @@ aside .wrap ul.list > li ul.listsub li a img:hover{
 }
 .sliding{
   right: 0px !important;
+}
+.slideHide{
+  right: -200px;
 }

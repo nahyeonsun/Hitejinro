@@ -18,7 +18,8 @@ section#product{
   position: relative;
 }
 #product ul.list li:nth-child(1){
- 
+  grid-column: 1;
+  grid-row: 1;
 }
 #product ul.list li:nth-child(2){
   grid-row: 1 / span 2;
@@ -47,8 +48,7 @@ section#product{
 #product ul.list li:nth-child(9){
  
 }
-#product ul.list li figure{
-  
+#product ul.list li figure{  
   height: 100%;
 }
 #product ul.list li figure img{
@@ -138,7 +138,7 @@ section#product{
    background-image: url(../img/sns9.png);
 }
 #sns{  
-  
+  background-color: #ddd;
 }
 #sns h2{ 
   font-size: 28px;
@@ -154,8 +154,7 @@ section#product{
   font-weight: 500;
   margin-bottom: 10px;
 }
-#sns li a p{
-  
+#sns li a p{  
   font-size: 13px;
   color: #777;
 }

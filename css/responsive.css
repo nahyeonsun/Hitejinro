@@ -1,4 +1,44 @@
-@media screen and (max-width:768px){
+@media screen and (max-width:1440px){
+  body{    
+    padding-right: 100px;
+  }
+  /*  헤더  */
+  header .wrap nav {    
+    grid-template-columns: 1fr 1fr;
+    padding: 0 15px;
+  }
+  header .wrap nav h1{    
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: auto;
+  }
+  header .wrap nav ul.gnb{    
+    grid-column: 1/ span 2;
+    grid-row: 2;
+    justify-self: center;
+  }
+  header .wrap nav ul.enb{
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    justify-self: end;
+  }
+  header .wrap nav .wgnb{
+    width: 80%;
+    height: 100vh;
+    /*! left: 80%; */
+    top: 0;
+    background-color: white;
+    background-image: initial;
+  }
+}
+/* ---------------------------------------------------- */
+@media screen and (max-width:1200px){
+  body{
+    overflow-x: hidden;
+    padding-right: 0;
+  }
+  /*  여백  */
   .wrap{
     padding: 0 15px;
   }
@@ -6,37 +46,228 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  aside{
-    display: none;
+  /*  상단영역  */
+  header{
+    background-color: #f5f5f5;
   }
-  /*  상단영역   */
   header .wrap nav ul.gnb{
     display: none;
   }
   header .wrap nav ul.enb{
     display: none;
   }
-  header .wrap nav{    
+  header .wrap nav.wgnb{
+    width: 85%;
+    height: 100vh;
+    left: -85%;
+    top: 0;
+  }
+  /*  추가0   */
+  header .wrap nav .wgnb .wsub{
+    padding-left:30px;
+    display: initial;
+    position: initial;
+  }
+  header .wrap nav .wgnb h2{
+    display: block;
+    cursor: pointer;
+    font-size: 19px;
+    line-height: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.7;
+    color: #444;
+  }
+  .currenH2{
+    color: #074dd4;
+  }
+  header .wrap nav .wgnb h2::after{
+    content: "";
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    background-image: url(../img/expand.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+  }
+  header .wrap nav .wgnb h2.currenH2::after{
+    transform: rotate(-180deg);
+  }
+  header .wrap nav .wgnb ul{
+    text-align: left;
+    display: none;
+    background-color:#eee;
+    margin-left: -50px;
+    margin-right: -20px;
+    padding-left: 50px;
+  }
+  header .wrap nav .wgnb ul.sub1{
+    display: initial;
+  }
+  header .wrap nav .wgnb ul.sub2{
+    display: none;
+  }
+  header .wrap nav .wgnb ul li{
+
+  }
+  header .wrap nav .wgnb ul.sub1 > li:nth-child(-n+3){
+    
+  margin-left: 0;
+  padding-left: 0;
+  }
+  header .wrap nav .wgnb ul.sub1 > li:nth-child(n+4){
+    
+  border-left: none;
+  }
+  header .wrap nav .wgnb ul li a{
+    display: block;
+    line-height: 3;
+  }
+  header .wrap nav .wgnb ul.sub1 > li > a{
+    color: #555;
+  }
+  header .wrap nav .wgnb ul li:not(:first-child) a{
+    border-top:1px solid #ccc;
+  }
+  header .wrap nav .wgnb ul.sub1 > li:nth-child(n+4) a{
+    padding-left: 0;
+  }
+  /* 추가1   */
+  header .wrap nav{
     grid-template-columns: auto 1fr auto;
     grid-template-rows: 50px;
   }
-  header .wrap nav h1{    
+  header .wrap nav h1{
     grid-column: 2;
     grid-row: 1;
   }
   header .wrap nav h1::before{
     height: 100%;
   }
-  .ham{    
+  .ham{
     display: flex;
     grid-column: 1;
+    grid-row: 1;
     position: relative;
   }
-  header .wrap nav h2{    
+  header .wrap nav h2{
     position: relative;
     font-size: 15px;
     text-transform: uppercase;
+    cursor: pointer;
   }
+  /*  제품영역  */
+  #product ul.list{    
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+  }
+  #product ul.list li:nth-child(2){
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  #product ul.list li:nth-child(3){
+    grid-column: 3;
+    grid-row: 1;
+  }
+  #product ul.list li:nth-child(4){
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #product ul.list li:nth-child(5){
+    grid-column: 3;
+    grid-row: 2;
+  }
+  #product ul.list li:nth-child(6){
+    grid-column: 2 / span 3;
+    grid-row: 3;
+  }
+  #product ul.list li:nth-child(7){
+    grid-column: 1;
+    grid-row: 3;
+  }
+  #product ul.list li:nth-child(8){
+    grid-column: 1 /span 2;
+    grid-row: 4;
+  }
+  #product ul.list li:nth-child(9){
+    grid-column: 3;
+    grid-row: 4;
+  }
+  /*  어사이드  */
+  aside{
+  display: none;
+  }
+  .asideSliding{
+    right: 0%;
+    display: block;
+  }
+  aside .wrap{   
+    width: auto;
+    display: block;
+  }
+  aside .wrap ul.list{    
+    text-align: left;
+    grid-template-rows: repeat(8, auto);
+  }
+   aside .wrap ul.list > li h3::before{
+    display: none;
+  }
+  aside .wrap ul.list > li h3{    
+    height: initial;
+  }
+  aside .wrap ul.list > li h3 a{
+    color: #000;
+    font-size: 20px;
+    flex-direction: row;
+    justify-content: left;
+    line-height: 3.5;
+  }
+  aside .wrap ul.list > li:not(:first-child) h3 a{
+    border-top: 1px solid #e6e6e6;
+  }
+  aside .wrap ul.list > li h3 a::before{    
+    background-image: url(../img/aside/mgnb_brand_menu-m.png);
+  }
+  aside .wrap ul.list > li h3 a::after{
+    content: '';
+    background-image: url(../img/plus.svg);
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 0;
+  }
+  aside .wrap ul.list > li div{
+    display: none;
+  }
+  aside .wrap ul.list > li ul.listsub{
+/*     display: none; */
+    position: static;
+    height: initial;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  aside .wrap ul.list > li ul.listsub::before{    
+    display: none;
+  }
+  aside .wrap ul.list > li ul.listsub li{    
+    width: calc(100% / 3);
+  }
+  aside .wrap ul.list > li ul.listsub li a{    
+    width: 100%;
+  }
+  aside .wrap ul.list > li ul.listsub li a img{    
+    width: 100%;
+  }
+  /*  하단영역  */
+  footer .btop{
+    display: none;
+  }
+}
+/* ---------------------------------------------------- */
+@media screen and (max-width:768px){
   /*  타이틀 영역  */
   div#subtitle .wrap .slick-dots{    
     bottom: 2.34375vw;
@@ -44,7 +275,7 @@
   div#subtitle button::before{    
     font-size: 1.302083333333333vw;
   }
-  /* 메인영역   */
+  /*  메인영역  */
   #product .wrap h2{  
     font-size: calc(25px * 0.5);
   }
@@ -108,6 +339,18 @@
   #sns .slick-dots li button::before{   
     margin: 0;
   }
+  /*  어사이드  */
+    aside{    
+    display: block;
+    width: 100%;
+    right: -100%;
+    top: 50px;
+    height: calc(100% - 50px);
+    background-color: white;
+    position: absolute;
+    transition: 1s;
+  }
+
   /*  하단영역  */
   footer div.wrap{
     padding-top:20px;
@@ -142,3 +385,4 @@
   footer .btop{
     display: none;
   }
+}

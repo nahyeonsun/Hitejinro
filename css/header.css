@@ -1,6 +1,23 @@
 header {
   position: relative;
 }
+.headerFix{
+  position: fixed; 
+  z-index: 1;
+  width: 100%;
+  background-color: white;
+  top: 0;
+  animation-name: down;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+@keyframes down{
+  100%{
+    top: -100px;
+  }
+}
 @keyframes headerdown{
   0%{
     transform: translateY(-40px);
@@ -25,11 +42,23 @@ header .wrap nav {
   grid-template-rows: 40px auto;
   align-items: center;
 }
+header.headerFix .wrap nav{
+  grid-template-rows: 1fr; 
+  grid-template-columns: auto 1fr auto;
+}
 header .wrap nav h1 {
   grid-column: 1 / span 2;
-  background-color: #f5f5f5;
   justify-self: center;
   line-height: 2;
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header.headerFix .wrap nav h1{
+  grid-column: 1; 
+  justify-self: flex-start; 
 }
 header .wrap nav h1::before{
   content: "";
@@ -40,6 +69,9 @@ header .wrap nav h1::before{
   position: absolute;
   left: 0;
   top: 0;
+}
+header.headerFix .wrap nav h1::before{
+  display: none;
 }
 header .wrap nav h1:hover::before{
   
@@ -60,12 +92,15 @@ header .wrap nav ul.gnb {
   display: flex;
   align-items: center;
 }
+header.headerFix .wrap nav ul.gnb{
+  justify-self: center;
+}
 header .wrap nav ul.gnb li {
   display: flex;
   align-items: center;
 }
 header .wrap nav ul.gnb li a { 
-  padding: 0px 53px;
+  padding: 0px 45px;
   font-size: 13px;
   font-weight: 500;
   display: block;
@@ -78,6 +113,175 @@ header .wrap nav ul.gnb li a:hover{
  
 }
 
+/* wgnb */
+header .wrap nav .wgnb{
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  padding: 0px 20px 0 50px;
+  box-sizing: border-box;
+  /*! transition: 1s; */
+  left: 0;
+  top: 140px;
+  background-image: url(../img/bg_company.jpg);
+  display: none;
+  height: 270px;
+}
+header .wrap nav .wgnb *{
+  color: white;
+}
+header .wrap nav .wgnb .center{
+ max-width: 1200px;
+ margin: 0 auto;
+ position: relative;
+}
+.wgnbShow{
+  left: 0% !important;
+  display: block !important;
+}
+.close{  
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-image: url(../img/close.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+header .wrap nav .wgnb .wsub{ 
+  /*! padding-left:30px; */
+  height: 240px;
+}
+header .wrap nav .wgnb .wsub:nth-child(2) ul.sub1{
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: auto;
+}
+header .wrap nav .wgnb .wsub:nth-child(2) ul.sub1 li:nth-child(1){
+  grid-column: 2;
+  grid-row: 1;
+}
+header .wrap nav .wgnb .wsub:nth-child(2) ul.sub1 li:nth-child(1) div{
+  width: 80%;
+  font-size: 14px;
+}
+header .wrap nav .wgnb .wsub:nth-child(2) ul.sub1 li:nth-child(1) div a{
+  line-height: 1.4;
+  color: #ccc;
+}
+header .wrap nav .wsub:nth-child(2) ul.sub1>li:nth-child(2){
+  grid-column: 3;
+  grid-row: 1;
+}
+header .wrap nav .wsub:nth-child(2) ul.sub1>li:nth-child(3){
+  grid-column: 4;
+  grid-row: 1;
+}
+header .wrap nav .wsub:nth-child(2) ul.sub1 > li:nth-child(3) ul.sub2{
+  flex-direction: column;
+}
+header .wrap nav .wgnb .wsub{
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+header .wrap nav .wgnb h2{  
+  /*! display: block; */
+  /*! cursor: pointer; */
+  /*! line-height: 3; */
+  /*! font-size: 19px; */
+  /*! display: flex; */
+  /*! justify-content: space-between; */
+  /*! align-items: center; */
+  /*! opacity: 0.7; */
+}
+.currenH2{
+ color: blue;
+}
+header .wrap nav .wgnb h2::after{
+  content: "";
+  display: inline-block;
+  width: 31px;
+  height: 31px;
+  background-image: url(../img/expand.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+header .wrap nav .wgnb h2.currenH2::after{
+  transform: rotate(-180deg);
+}
+header .wrap nav .wgnb ul.sub1{  
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  grid-template-rows: repeat(3,90px);
+  text-align: left;
+}
+header .wrap nav .wgnb ul.sub1>li{   
+  transition: 0.5s;
+}
+header .wrap nav .wgnb ul.sub1 > li:nth-child(-n+3){ 
+  margin-left: -20px;
+  padding-left: 20px;
+}
+header .wrap nav .wgnb ul.sub1 > li:hover{
+  background-color: rgba(0,0,0,0.3);
+}
+header .wrap nav .wgnb ul.sub1 > li:nth-child(n+4){
+  border-left: 1px solid #4967b3;
+   grid-row: 1 / span 3;
+}
+header .wrap nav .wgnb ul.sub1 > li:nth-child(2){
+  grid-column: 1;
+  grid-row: 2;
+}
+header .wrap nav .wgnb ul.sub1 > li:nth-child(3){
+  grid-column: 1;
+  grid-row: 3;
+}
+header .wrap nav .wgnb ul.sub1 > li > a{  
+  line-height: 3;
+  display: block;
+  padding-top: 20px;
+}
+header .wrap nav .wgnb ul.sub1 > li > a:hover{  
+  color: aqua;
+}
+header .wrap nav .wgnb ul.sub1>li>a::before{
+  content: "";
+  border-top: 1px solid #fff;
+  display: block;
+  width: 30px;
+}
+header .wrap nav .wgnb ul.sub1>li:nth-child(n+4) a{
+  padding-left: 20px;
+}
+header .wrap nav .wgnb ul.sub1>li:not(:first-child)>a{
+
+}
+header .wrap nav .wgnb ul.sub2{
+  
+}
+header .wrap nav .wsub:nth-child(2) ul.sub1 > li:nth-child(2) ul.sub2{
+  flex-wrap: wrap;
+}
+header .wrap nav .wsub:nth-child(2) ul.sub1 > li:nth-child(2) ul.sub2 li{
+  width: 40%;
+}
+header .wrap nav .wgnb ul.sub2 li{
+  
+}
+header .wrap nav .wgnb ul.sub2 li a{
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: normal;
+}
+header .wrap nav .wgnb ul.sub1 > li > a:hover{  
+  color: aqua;
+}
+
+
+
 /* 기타메뉴 */
 header .wrap nav ul.enb { 
   display: flex;
@@ -85,6 +289,52 @@ header .wrap nav ul.enb {
   align-items: center;
   font-size: 10px;
   gap: 8px;
+}
+header.headerFix .wrap nav ul.enb{
+  
+}
+header .wrap nav ul.enb li {
+  
+}
+header .wrap nav ul.enb li a { 
+  padding: 3px 5px;
+  color: #999;
+  font-weight: 500;
+  border-bottom: 1px solid;
+  display: block;
+}
+header .wrap nav ul.enb li:nth-child(3) a{
+  color: #7cbcff;
+}
+header .wrap nav ul.enb li:nth-child(4) a{
+  padding-right: 0px;
+}
+header .wrap nav ul.enb li:nth-child(4) a::after{
+  content: "";
+  background-image: url(../img/up.svg);
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background-size: contain;
+  vertical-align: -2px;
+}
+header .wrap nav ul.enb li a:hover {
+
+}
+header .wrap nav ul.enb li:nth-child(1) a::after,header .wrap nav ul.enb li:nth-child(2) a::after{
+ 
+}
+
+/* 기타메뉴 */
+header .wrap nav ul.enb { 
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 10px;
+  gap: 8px;
+}
+header.headerFix .wrap nav ul.enb{
+  
 }
 header .wrap nav ul.enb li {
   
