@@ -230,6 +230,11 @@
                 // 탑버튼을 클릭하면 상단으로 감
                 $("html,body").animate({scrollTop:0},1000); //문서스크롤 애니
             });
+            $("#top").load("header.html",function(){
+                doc();
+            });
+            $("#subtitle").load("#subtitle.html");
+            $("footer").load("footer.html");
         });
     </script> 
     <!-- slick -->
