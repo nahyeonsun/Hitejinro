@@ -116,10 +116,10 @@
                             $("div#subtitle .wrap img[src='img/i10.jpg']").attr("src","img/m/m-title10.png"); 
                             */
                             var n = 1; // 변수선언과 초기화
-                            $("div#subtitle .wrap img").each(function(){ // 반복회수를 지정
+                            //$("div#subtitle .wrap img").each(function(){ // 반복회수를 지정
                                 //subtitle wrap 안에 있는 img를 src 안에 있는 이미지로 바꿔라
                                 $("div#subtitle .wrap img:nth-child("+n+")").attr("src","img/m/m-title"+n+".jpg");
-                                n++; // n에 들어간 값이 실행할 때마다 바뀌어야 하기 떄문이다 / 안쓰면 1만 반복이 된다
+                               // n++; // n에 들어간 값이 실행할 때마다 바뀌어야 하기 떄문이다 / 안쓰면 1만 반복이 된다
                             });
                         }
                         
