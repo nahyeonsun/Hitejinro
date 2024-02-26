@@ -227,6 +227,7 @@
 	<!-- snsSlide / titleani  -->
     <script type="text/javascript">
         $(document).ready(function(){
+           
             // 타이틀 영역 로드
             function titleani(){
                 $('.titleani').slick({
@@ -279,7 +280,7 @@
                     $(this).children("p,a").wrapAll("<div class='wtext'></div>"); 
                     // wrapAll('<태그></태그');앞요소를 둘러싸시오(괄호안의 태그로)
                     $(".wtext").hide();
-                });
+                });           
                 // 프로덕트 제품오버시 설명글 표시
                     //목록항목에 마우스올리면 실행하시오
                 $("#product ul.list li").hover(
@@ -386,6 +387,21 @@
 
                     }
             });
+                /*
+                / 다른 요소를 잘라내서 원하는 요소안에 넣기
+                    잘라내올 요소.appendTo("붙여넣을 요소");
+
+                    / 조건문 if
+                    구문형식 if(조건){조건이 맞으면 실행될 구문}
+                    /$(window) : 브라우저창
+                    / width();너비를 가져오시오
+                    / < : 작다면
+
+                    if($(window).width()<769){ // 창크기가 769미만이라면 
+                        $("aside .wrap h2").appendTo("header .wrap nav");  //  h2를 ..로 옮겨라
+                    }
+            */
+            
                 /* 햄버거버튼 클릭 - 대메뉴 보이기 */
                 // 햄버거를 클릭하면 실행하시오()
                 $(".ham").click(function(){
