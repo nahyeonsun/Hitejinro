@@ -55,7 +55,7 @@
     background-color: white;
     background-image: initial;
     transition: 1s;
-    display: block !important;
+    display: block;
   }
   header .wrap nav .wgnb .wsub{
     padding-left:30px;
