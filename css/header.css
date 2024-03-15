@@ -234,17 +234,19 @@ header .wrap nav .wgnb ul.sub1 > li:nth-child(n+4){
    grid-row: 1 / span 3;
 }
 header .wrap nav .wgnb ul.sub1 > li:nth-child(2){
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 2;
 }
-
 header .wrap nav .wgnb ul.sub1 > li:nth-child(3){
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 1;
+}
+header .wrap nav .wgnb ul.sub1 > li:nth-child(4){
+  grid-column: 3;
+  grid-row: 2;
 }
 header .wrap nav .wgnb .wsub:nth-child(3) ul.sub1{
   grid-template-columns: repeat(7,1fr);
-
 }
 header .wrap nav .wgnb .wsub:nth-child(3) ul.sub1 li:nth-child(1){
   grid-column: 1;
@@ -272,6 +274,15 @@ header .wrap nav .wgnb .wsub:nth-child(3) ul.sub1 li:nth-child(6){
 }
 header .wrap nav .wgnb .wsub:nth-child(3) ul.sub1 li:nth-child(7){
   grid-column: 7;
+  grid-row: 1;
+}
+header .wrap nav .wgnb .wsub:nth-child(4) ul.sub1{
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 1fr 1fr;
+
+}
+header .wrap nav .wgnb .wsub:nth-child(4) ul.sub1 li:nth-child(1){
+  grid-column: 2;
   grid-row: 1;
 }
 header .wrap nav .wgnb ul.sub1 > li > a{  
