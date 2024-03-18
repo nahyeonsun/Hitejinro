@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/subtitle.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/greeting.css">
     <link rel="stylesheet" href="css/aside.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -194,12 +193,12 @@
                     // 사이드 애니
                     if($(window).scrollTop()>$("#subtitle").height()+40){
                         // aside에 클래스를 붙이시오(slideHide)
-                       //  $("aside").addClass("slideHide");
+                        $("aside").addClass("slideHide");
                         // 탑 애니
                         // 탑요소에 클래스를 붙이시오(topFix)
                         $("footer .btop").addClass("topFix");
                     }else{ // 위 조건이 안 맞으면 (그렇지 않으면) - 위의 조건과 반대
-                       // $("aside").removeClass("slideHide"); // aside태그에 클래스를 없애시오
+                        $("aside").removeClass("slideHide"); // aside태그에 클래스를 없애시오
                         $("footer .btop").removeClass("topFix"); // 탑 버튼에 클래스를 없애시오
                     }
                     // 하단 탑버튼 페이지와 같이 이동
@@ -549,20 +548,7 @@
         </div>
    </header>
    <!-- 타이틀영역 -->
-   <div id="subtitle" class="height-full">
-        <div class="titleani wrap height-full">
-            <img src="img/i1.jpg" alt="켈리 포스터">
-            <img src="img/i2.jpg" alt="테라 포스터">
-            <img src="img/i3.jpg" alt="참이슬 포스터">
-            <img src="img/i4.jpg" alt="진로 포스터">
-            <img src="img/i5.jpg" alt="필라이트 포스터">
-            <img src="img/i6.jpg" alt="일품진로 OAK43 포스터">
-            <img src="img/i7.jpg" alt="일품진로 포스터">
-            <img src="img/i8.jpg" alt="진로1924 포스터">
-            <img src="img/i9.jpg" alt="매화수 포스터">
-            <img src="img/i10.jpg" alt="에스라이트 포스터">
-        </div>
-    </div>
+
    <!-- 메인영역 -->
    <main>
         <section id="product">

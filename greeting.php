@@ -4,19 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon.png"/>
-    <title>HITE 진로</title>
+    <title>HITE 진로:인사말</title>
    <!-- 공통css파일 -->
     <? include("include/common-css.html") ?>
 
-    <link rel="stylesheet" href="css/subtitle.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/greeting.css">
 
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-
-    </script>
     <script type="text/javascript">
         // 공통 html 코드 불러오기
         $("#top").load("header.html");  // 원하는 파일 경로를 삽입하면 된다
@@ -188,12 +182,12 @@
                     // 사이드 애니
                     if($(window).scrollTop()>$("#subtitle").height()+40){
                         // aside에 클래스를 붙이시오(slideHide)
-                       // $("aside").addClass("slideHide");
+                        $("aside").addClass("slideHide");
                         // 탑 애니
                         // 탑요소에 클래스를 붙이시오(topFix)
                         $("footer .btop").addClass("topFix");
                     }else{ // 위 조건이 안 맞으면 (그렇지 않으면) - 위의 조건과 반대
-                       .. $("aside").removeClass("slideHide"); // aside태그에 클래스를 없애시오
+                        $("aside").removeClass("slideHide"); // aside태그에 클래스를 없애시오
                         $("footer .btop").removeClass("topFix"); // 탑 버튼에 클래스를 없애시오
                     }
                     // 하단 탑버튼 페이지와 같이 이동
@@ -229,16 +223,12 @@
             });
         });
     </script> 
-   <!-- slick파일 -->
-   <? include("include/slick.html") ?>
 </head>
 <body>
     <!-- 상단영역 -->
    <? include("include/header.html"); ?>
-   <!-- 타이틀영역 -->
-   <? include("include/title.html"); ?>
    <!-- 메인영역 -->
-   <? include("include/main.html"); ?>
+   <? include("include/greeting.html"); ?>
    <!-- 어사이드 브랜드 -->
    <? include("include/aside.html"); ?>
    <!-- 하단영역 -->
