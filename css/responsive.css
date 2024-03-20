@@ -269,6 +269,10 @@
 }
 /* ---------------------------------------------------- */
 @media screen and (max-width:768px){
+  /*  헤더영역  */
+  header .wrap nav .wgnb{
+    display: none;
+  }
   /*  타이틀 영역  */
   div#subtitle .wrap .slick-dots{    
     bottom: 2.34375vw;
