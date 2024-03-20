@@ -49,7 +49,7 @@
   /*  추가0   */
   header .wrap nav .wgnb{
     width: 80%;
-    height: 100vh;
+    height: 100vh !important;
     /*! left: 80%; */
     top: 0;
     background-color: white;
