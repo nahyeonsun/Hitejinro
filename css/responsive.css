@@ -59,7 +59,7 @@
   }
   header .wrap nav .wgnb .wsub{
     padding-left:30px;
-    display: initial;
+    display: initial !important;
     position: initial;
   }
   header .wrap nav .wgnb h2{
