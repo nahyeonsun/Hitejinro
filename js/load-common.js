@@ -146,26 +146,30 @@ $(document).ready(function(){
             // 스크롤이벤트    
             $(window).scroll(function(){
                // 헤더 애니
-               if($(window).scrollTop()>$("header").height()){ //윈도우의 scrollTop위치값이 헤더의 높이보다 크다면
-                  //body에 스타일을 지정하시오(padding-top값에 header높이값을 지정)
-                  $("body").css("padding-top",headerH);
-                  //header에 클래스를 붙이시오
-                  $("header").addClass("headerFix");
-               }else{ // 위에 조건이 맞지 않을 경우
-                  $("body").css("padding-top",0);
-                  //header에 클래스를 붙이시오
-                  $("header").removeClass("headerFix");
-               }
-               // 사이드 애니
-               if($(window).scrollTop()>$("#subtitle").height()+40){
-                  //aside에 클래스를 붙이시오(slideHide)
-                  $("aside").addClass("slideHide");
-                  // 탑 애니
-                  //탑요소에 클래스를 붙이시오(topFix)
-                  $("footer .btop").addClass("topFix");
-               }else{ // 위 조건이 안맞으면(그렇치 않으면) - 위의 조건과 반대
-                  $("aside").removeClass("slideHide");// aside태그에 클래스를 없애시오
-                  $("footer .btop").removeClass("topFix"); // 탑버튼에 클래스를 없애시오
+               if($(window).width()>1200){
+                     //헤더 애니
+                     if($(window).scrollTop()>$("header").height()){// 윈도우의 scrollTop 위치 값이 헤더의 높이보다 크다면
+                        // body에 스타일을 지정하시오(padding-top값에 haeder 높이 값을 지정)
+                        $("body").css("padding-top",headerH);
+                        // $("body").css("padding-top",$("header").height());
+                        // header에 클래스를 붙이시오
+                        $("header").addClass("headerFix");
+                     }else{ // 위에 조건이 맞지 않을 경우
+                        $("body").css("padding-top",0);
+                        // header에 클래스를 붙이시오
+                        $("header").removeClass("headerFix");   
+                     }
+                     // 사이드 애니
+                     if($(window).scrollTop()>$("#subtitle").height()+40){
+                        // aside에 클래스를 붙이시오(slideHide)
+                        // $("aside").addClass("slideHide");
+                        // 탑 애니
+                        // 탑요소에 클래스를 붙이시오(topFix)
+                        $("footer .btop").addClass("topFix");
+                     }else{ // 위 조건이 안 맞으면 (그렇지 않으면) - 위의 조건과 반대
+                        // $("aside").removeClass("slideHide"); // aside태그에 클래스를 없애시오
+                        $("footer .btop").removeClass("topFix"); // 탑 버튼에 클래스를 없애시오
+                     }
                }
                // 하단 탑버튼 페이지와 같이 이동
                if($(window).scrollTop()>$("footer").offset().top-$(window).height()){ // 푸터 위에서 떨어진 거리
