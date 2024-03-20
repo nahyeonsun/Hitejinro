@@ -125,7 +125,7 @@ header .wrap nav .wgnb{
   left: 0;
   top: 140px;
   background-image: url(../img/bg_company.jpg);
-  /*! display: none; */
+  display: none;
   height: 270px;
 }
 header.headerFix .wrap nav .wgnb{
