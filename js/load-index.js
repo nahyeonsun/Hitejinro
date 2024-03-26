@@ -148,7 +148,7 @@ $(document).ready(function(){
                // 헤더 애니
                if($(window).width()>1200){
                   //헤더 애니
-                  if($(window).width>1200){// 윈도우의 scrollTop 위치 값이 헤더의 높이보다 크다면
+                  if($(window).scrollTop()>$("header").height()){// 윈도우의 scrollTop 위치 값이 헤더의 높이보다 크다면
                      // body에 스타일을 지정하시오(padding-top값에 haeder 높이 값을 지정)
                      $("body").css("padding-top",headerH);
                      // $("body").css("padding-top",$("header").height());
