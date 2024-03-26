@@ -148,16 +148,16 @@ $(document).ready(function(){
                // 헤더 애니
                if($(window).width()>1200){
                   //헤더 애니
-                  if($(window).scrollTop()>$("header").height()){// 윈도우의 scrollTop 위치 값이 헤더의 높이보다 크다면
+                  if($(window).width>1200){// 윈도우의 scrollTop 위치 값이 헤더의 높이보다 크다면
                      // body에 스타일을 지정하시오(padding-top값에 haeder 높이 값을 지정)
                      $("body").css("padding-top",headerH);
                      // $("body").css("padding-top",$("header").height());
                      // header에 클래스를 붙이시오
-                     // $("header").addClass("headerFix");
+                     $("header").addClass("headerFix");
                   }else{ // 위에 조건이 맞지 않을 경우
                      $("body").css("padding-top",0);
                      // header에 클래스를 붙이시오
-                     // $("header").removeClass("headerFix");   
+                     $("header").removeClass("headerFix");   
                   }
                   // 사이드 애니
                   if($(window).scrollTop()>$("#subtitle").height()+40){
