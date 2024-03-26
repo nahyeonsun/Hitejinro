@@ -153,7 +153,7 @@ $(document).ready(function(){
                      $("body").css("padding-top",headerH);
                      // $("body").css("padding-top",$("header").height());
                      // header에 클래스를 붙이시오
-                     $("header").addClass("headerFix");
+                     // $("header").addClass("headerFix");
                   }else{ // 위에 조건이 맞지 않을 경우
                      $("body").css("padding-top",0);
                      // header에 클래스를 붙이시오
