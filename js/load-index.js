@@ -157,7 +157,7 @@ $(document).ready(function(){
                   }else{ // 위에 조건이 맞지 않을 경우
                      $("body").css("padding-top",0);
                      // header에 클래스를 붙이시오
-                     $("header").removeClass("headerFix");   
+                     // $("header").removeClass("headerFix");   
                   }
                   // 사이드 애니
                   if($(window).scrollTop()>$("#subtitle").height()+40){
